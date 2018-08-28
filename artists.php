@@ -19,30 +19,10 @@ if(!defined('ARTIST_URL'))
 if(!defined('ARTIST_PATH'))
 	define('ARTIST_PATH', plugin_dir_path( __FILE__ ));
  
-/*
- * Main class
- */
-/**
- * Class Artist
- *
- * This class creates the option page and add the web app script
- */
-class Artist
-{
- 
-    /**
-     * Artist constructor.
-     *
-     * The main plugin actions registered for WordPress
-     */
-    public function __construct()
-    {
- 
-    }
- 
-}
- 
-/*
- * Starts our plugin class, easy!
- */
-new Artist();
+
+require_once ARTIST_PATH.'/includes/class-artist.php';
+
+
+// Create an instance of our class to kick off the whole thing
+$artist = new Artist;
+
